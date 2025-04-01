@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+section {
+  display: flex;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: hsl(30, 38%, 92%);
+}
+
+.perfume-product__image {
+  width: 222px;
+}
+
+.perfume-product__card {
+  width: 440px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.perfume-product__description {
+  display: flex;
+  flex-direction: column;
+  padding: 23px;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.perfume-product__name {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 10px;
+  color: hsl(228, 12%, 48%);
+  letter-spacing: 2px;
+}
+
+.perfume-product__title {
+  font-family: "Fraunces";
+  font-size: 25px;
+  font-weight: 700;
+  color: hsl(212, 21%, 14%);
+  line-height: 25px;
+  padding: 13px 0 20px 0;
+}
+
+.perfume-product__text {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 15px;
+  color: hsl(228, 12%, 48%);
+  padding-bottom: 18px;
+  word-spacing: 2px;
+}
+
+.perfume-product__price {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.perfume-product__price h2 {
+  color: hsl(158, 36%, 37%);
+  font-family: "Fraunces";
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.perfume-product__price p {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 10px;
+  color: hsl(228, 12%, 48%);
+}
+
+.perfume-product__buy {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  background-color: hsl(158, 36%, 37%);
+  border: none;
+  border-radius: 8px;
+  padding: 11px 40px;
+  font-size: 11px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  color: white;
+  margin-top: 22px;
+}
+
+button:hover {
+  background-color: hsl(158, 42%, 18%);
+  cursor: pointer;
+}
+
+.perfume-product__icon {
+  width: 10px;
+  height: 11px;
+}
+
+.perfume-product__image-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 420px) {
+  section {
+    display: block;
+  }
+
+  .perfume-product__image {
+    display: none;
+  }
+
+  .perfume-product__image-mobile {
+    display: block;
+    width: 100%;
+  }
+
+  .perfume-product__card {
+    width: 340px;
+  }
+
+  .perfume-product__title {
+    font-size: 30px;
+  }
+
+  .perfume-product__text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  button {
+    font-size: 15px;
+  }
+
+  .perfume-product__price h2 {
+    font-size: 30px;
+  }
+
+  .perfume-product__price p {
+    font-size: 13px;
+  }
+
+  .perfume-product__icon {
+    width: 13px;
+    height: 14px;
+  }}
