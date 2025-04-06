@@ -80,6 +80,7 @@ body {
 
 .feature-section__cards {
   width: 100%;
+  max-width: 800px;
   display: grid;
   gap: 25px;
   padding-top: 55px;
