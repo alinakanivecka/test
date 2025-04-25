@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(210, 46%, 95%);
+}
+
+.article-card {
+  width: 535px;
+  border-radius: 10px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.article {
+  padding: 25px;
+  font-family: "Manrope";
+}
+
+h1 {
+  font-size: 16px;
+  color: hsl(217, 19%, 35%);
+  font-weight: 700;
+}
+
+.description {
+  font-size: 10px;
+  color: hsl(214, 17%, 51%);
+  font-weight: 500;
+  padding: 17px 0;
+  line-height: 15px;
+}
+
+section {
+  display: flex;
+}
+
+.drawers {
+  width: 210px;
+  flex-shrink: 0;
+  background-image: url(images/drawers.jpg);
+  background-size: cover;
+}
+
+.avatar-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar-michelle {
+  width: 30px;
+  border-radius: 50%;
+}
+
+h2 {
+  font-size: 10px;
+  color: hsl(217, 19%, 35%);
+  font-weight: 700;
+}
+
+.date {
+  font-size: 9px;
+  color: hsl(212, 23%, 69%);
+  font-weight: 500;
+}
+
+.details {
+  flex-grow: 1;
+}
+
+.icon-share {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: hsl(210, 46%, 95%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon-share img {
+  width: 10px;
+  height: 10px;
+  transform: translateY(-1px);
+}
+
+.popup {
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+  width: 180px;
+  height: 41px;
+  background-color: hsl(217, 19%, 35%);
+  transform: translate(calc(-50% + 12.5px), -210%);
+  border-radius: 7px;
+  color: hsl(212, 23%, 69%);
+  letter-spacing: 4px;
+  font-size: 9px;
+  font-weight: 300;
+}
+
+.popup::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: hsl(217, 19%, 35%);
+  transform: translateY(20.5px) rotate(45deg);
+  position: absolute;
+}
+
+.popup img {
+  width: 15px;
+}
+
+.active-share .popup {
+  visibility: visible;
+}
+
+.active-share .icon-share {
+  background-color: hsl(214, 17%, 51%);
+}
+
+.active-share .icon-share img {
+  filter: brightness(269%);
+}
+
+@media screen and (max-width: 420px) {
+  section {
+    display: block;
+  }
+
+  .drawers {
+    width: 100%;
+    height: 200px;
+  }
+
+  .article-card {
+    margin: 26px;
+  }
+
+  .article {
+    padding: 0px;
+  }
+
+  .description {
+    line-height: 20px;
+    font-size: 14px;
+    padding: 20px 30px 30px 30px;
+  }
+
+  .avatar-michelle {
+    width: 40px;
+  }
+
+  h1 {
+    padding: 30px 30px 0px 30px;
+  }
+
+  h2 {
+    font-size: 13px;
+  }
+
+  .date {
+    font-size: 12px;
+  }
+
+  .popup::after {
+    display: none;
+  }
+
+  .active-share .popup {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transform: none;
+    position: inherit;
+    flex-grow: 1;
+    font-size: 11px;
+    height: 32px;
+    gap: 16px;
+    letter-spacing: 6px;
+  }
+
+  .active-share .popup img {
+    width: 18px;
+  }
+  
+  .active-share .share-button {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    padding: 0px 30px 20px;
+    width: 100%;
+    background-color: hsl(217, 19%, 35%);
+    padding-top: 15px;
+  }
+
+  .avatar-name {
+    padding: 0px 30px 20px 30px;
+  }
+
+  .active-share .avatar-michelle,
+  .active-share .details {
+    display: none;
+  }
+
+  .active-share.avatar-name {
+    padding: 0;
+  }
+}
