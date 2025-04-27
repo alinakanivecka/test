@@ -23,6 +23,8 @@ submitButton.addEventListener("click", (event) => {
     cardFormContent.classList.add("page-hidden");
     successMessage.classList.remove("page-hidden");
     confirmationEmail.textContent = input.value;
+  } else {
+    input.dispatchEvent(new Event('input'))
   }
 
   event.preventDefault();
