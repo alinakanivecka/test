@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Overpass';
+  background-color: hsl(216, 12%, 8%);
+}
+
+.icon-star {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: hsl(214, 19%, 22%);
+  padding: 10px;
+}
+
+.star-img {
+  width: 14px;
+  height: 14px;
+}
+
+.rating-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 370px;
+  padding: 25px;
+  border-radius: 25px;
+  background-color: #202731;
+}
+
+.rating-card__content {
+  padding: 30px 0 20px;
+}
+
+.rating-card__title {
+  color: white;
+  font-size: 24px;
+}
+
+.rating-card__description {
+  color: hsl(217, 12%, 63%);
+  font-size: 14px;
+  line-height: 23px;
+  font-weight: 400;
+  padding-top: 10px;
+}
+
+.rating-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 23px;
+}
+
+.rating-button {
+  color: hsl(217, 12%, 63%);
+  font-family: 'Overpass';
+  width: 45px;
+  height: 45px;
+  font-size: 14px;
+  background-color: hsl(214, 19%, 22%);
+  border: none;
+  border-radius: 50%;
+  font-weight: 700;
+}
+
+.rating-buttons span {
+  position: relative;
+  top: 1.5px;
+}
+
+.submit-btn {
+  background-color: hsl(25, 97%, 53%);
+  border: none;
+  border-radius: 50px;
+  font-family: 'Overpass';
+  padding: 12px 0;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+ .rating-button:hover {
+  background-color: hsl(25, 97%, 53%);
+  cursor: pointer;
+  color: black;
+  font-weight: 700;
+}
+
+.selected {
+  background-color: white;
+  color: black;
+}
+
+.selected-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 370px;
+  padding: 35px;
+  border-radius: 25px;
+  background-color: #202731;
+}
+
+.card-content {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.selected-rating {
+  background-color: hsl(214, 19%, 22%);
+  padding: 7px 14px;
+  border-radius: 35px;
+  margin-top: 25px;
+}
+
+.selected-rating__description {
+  color: hsl(25, 97%, 53%);
+  font-size: 13px;
+}
+
+.card-text {
+  text-align: center;
+}
+
+.disable-card {
+  display: none;
+}
+
+@media screen and (max-width: 420px) {
+  .rating-card {
+    margin: 20px;
+  }
+
+  .selected-card {
+    margin: 20px;
+  }
+}
