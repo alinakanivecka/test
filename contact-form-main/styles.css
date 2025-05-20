@@ -1,0 +1,332 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Karla";
+  background-color: hsl(148, 38%, 91%);
+}
+
+.required {
+  color: hsl(169, 82%, 27%);
+}
+
+.contact-form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 542px;
+  margin-top: 191px;
+}
+
+.title {
+  color: hsl(187, 24%, 22%);
+  font-weight: 700;
+  font-size: 25px;
+  padding-bottom: 30px;
+}
+
+.contact-form_name {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding-bottom: 20px;
+}
+
+.contact-form__label-txt {
+  color: hsl(187, 24%, 22%);
+  font-weight: 500;
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+
+.text-input {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.query-type {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: none;
+  margin: 20px 0;
+}
+
+.radio-buttons {
+  display: flex;
+  gap: 10px;
+  padding-top: 7px;
+}
+
+.radio-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid hsl(186, 15%, 59%);
+  padding: 10px 20px;
+  border-radius: 7px;
+  flex-grow: 1;
+  color: hsl(187, 24%, 22%);
+}
+
+.radio-btn:hover {
+  cursor: pointer;
+}
+
+.radio-btn:has(input[type="radio"]:checked) {
+  background-color: hsl(148, 38%, 91%);
+  border: 1px solid hsl(169, 82%, 27%);
+}
+
+input[type="text"] {
+  padding: 9px;
+  border-radius: 5px;
+  border: 1px solid hsl(186, 15%, 59%);
+}
+
+input[type="text"]:hover {
+  cursor: pointer;
+}
+
+input[type="text"]:focus {
+  outline: 1px solid hsl(169, 82%, 27%);
+  border: none;
+}
+
+input[type="radio"] {
+  appearance: none;
+  border: 1px solid hsl(188, 17%, 74%);
+  border-radius: 50%;
+  width: 13px;
+  height: 13px;
+}
+
+input[type="radio"]:checked {
+  border: 1px solid hsl(169, 82%, 27%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="radio"]:checked::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #007a5a;
+  border-radius: 50%;
+}
+
+textarea {
+  resize: none;
+  border-radius: 7px;
+  border: 1px solid hsl(186, 15%, 59%);
+}
+
+textarea:focus {
+  outline: 1px solid hsl(169, 82%, 27%);
+  border: none;
+}
+
+.contact-form__checkbox {
+  padding-left: 4px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 30px;
+  font-size: 14px;
+  color: hsl(187, 24%, 22%);
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.custom-checkbox {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border: 1px solid hsl(189, 6%, 43%);
+  border-radius: 1px;
+  position: relative;
+}
+
+.contact-form__checkbox:hover {
+  cursor: pointer;
+}
+
+.custom-checkbox::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 3px;
+  height: 7px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+input[type="checkbox"]:checked + .custom-checkbox {
+  background-color: hsl(169, 82%, 27%);
+  border-color: hsl(169, 82%, 27%);
+}
+
+input[type="checkbox"]:checked + .custom-checkbox::after {
+  opacity: 1;
+}
+
+.submit-btn {
+  background-color: hsl(169, 82%, 27%);
+  font-weight: 600;
+  color: white;
+  font-size: 15px;
+  width: 100%;
+  border: none;
+  border-radius: 7px;
+  padding: 16px 0;
+  font-family: 'Karla';
+  margin-top: 30px;
+}
+
+.submit-btn:hover {
+  background-color: #083c34;
+  cursor: pointer;
+}
+
+.error {
+  color: hsl(0, 66%, 54%);
+  font-size: 12px;
+  font-weight: 400;
+  padding-top: 9px;
+}
+
+input.invalid-input,
+textarea.invalid-input {
+  border: 1px solid hsl(0, 66%, 54%);
+}
+
+input.invalid-input:focus,
+textarea.invalid-input:focus {
+  outline: 1px solid hsl(0, 66%, 54%);
+}
+
+textarea.invalid-input:focus {
+  border: none;
+}
+
+.success-message {
+  background-color: #304444;
+  position: fixed;
+  top: 20px;
+  border-radius: 10px;
+  padding: 22px;
+  background-image: url(assets/images/icon-success-check.svg);
+  background-repeat: no-repeat;
+  background-position: left 25px top 23px;
+  background-size: 17px;
+}
+
+.success-message__title {
+  font-size: 17px;
+  font-weight: 600;
+  padding: 0 0 15px 29px;
+  color: white;
+}
+
+.success-message__description {
+  color: hsl(188, 19%, 75%);
+  font-size: 14px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+@media screen and (max-width: 420px) {
+  body {
+    height: auto;
+  }
+
+  .contact-form {
+    width: auto;
+    padding: 20px;
+    margin: 50px 15px;
+  }
+
+  .contact-form_name {
+    display: block;
+    padding: 0;
+  }
+
+  .contact-form__label-txt {
+    font-size: 16px;
+    margin-top: 15px;
+  }
+
+  .title {
+    font-size: 30px;
+    padding-bottom: 15px;
+  }
+
+  .radio-buttons {
+    flex-direction: column;
+  }
+
+  .radio-btn {
+    height: 50px;
+    gap: 11px;
+  }
+
+  .radio-btn label {
+    font-size: 18px;
+  }
+
+  input[type=text] {
+    height: 50px;
+  }
+
+  input[type=radio] {
+    width: 16px;
+    height: 16px;
+  }
+
+  .query-type {
+    margin: 15px 0 8px;
+  }
+
+  textarea {
+    height: 200px;
+    padding: 9px;
+  }
+
+  .custom-checkbox {
+    width: 20px;
+    height: 17px;
+  }
+
+  .contact-form__checkbox {
+    font-size: 17px;
+    gap: 20px;
+  }
+
+  .submit-btn {
+    font-size: 18px;
+  }
+}
