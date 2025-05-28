@@ -551,7 +551,7 @@ li {
   }
 
   .cart-popup {
-    z-index: 1;
+    z-index: 99;
     left: 10px;
     width: calc(100% - 20px);
     transform: none;
