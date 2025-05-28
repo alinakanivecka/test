@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="ecommerce-page">
+    <header>
+      <div class="menu-logo"> 
+        <img class="logo" src="images/logo.svg" alt="logo">
+      <img class="icon-menu" src="images/icon-menu.svg" alt="icon-menu">
+      </div>
+      <div class="header-navigation">
+        <nav>
+          <ul>
+            <li>Collections</li>
+            <li>Men</li>
+            <li>Women</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-cart">
+        <div class="cart-container">
+          <div class="cart-badge-container"> 
+            <span class="cart-badge hidden"></span>
+          </div>
+          <img class="header__icon-cart" src="images/icon-cart.svg" alt="icon-cart">
+          <div class="cart-popup hidden">
+            <p class="cart">Cart</p>
+            <p class="cart-status-empty">Your cart is empty.</p>
+           <div class="cart-status-filled hidden">
+             <div class="cart-status-content">
+              <img class="cart-status-image" src="images/image-product-1-thumbnail.jpg" alt="image-preview1">
+              <div class="amount-price">
+                <p>Fall Limited Edition Sneakers</p>
+                <span class="price-items">$125.00 x <span class="cart-items-amount"></span> <span class="cart-total-price"></span></span>
+              </div>
+              <img class="icon-delete" src="images/icon-delete.svg" alt="icon-delete">
+            </div>
+            <button class="chekcout-btn">Chekcout</button>
+           </div>
+          </div>
+        </div>
+        <img class="image-avatar" src="images/image-avatar.png" alt="image-avatar">
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="image-cards">
+          <img class="icon-previous-mobile arrow-mobile" src="images/icon-previous.svg" alt="icon-previous">
+          <img class="image-preview-big" src="images/image-product-1.jpg" alt="image-product-1">
+          <img class="icon-next-mobile arrow-mobile" src="images/icon-next.svg" alt="icon-next">
+          <div class="image-carousel">
+            <div class="image-preview image-preview-active">
+              <img src="images/image-product-1.jpg" alt="image-preview1">
+            </div>
+            <div class="image-preview">
+              <img src="images/image-product-2.jpg" alt="image-preview2">
+            </div>
+            <div class="image-preview">
+              <img src="images/image-product-3.jpg" alt="image-preview3">
+            </div>
+            <div class="image-preview">
+              <img src="images/image-product-4.jpg" alt="image-preview4">
+            </div>
+          </div>
+        </div>
+        <div class="image-cards__content">
+          <span class="name-company">SNEAKER COMPANY</span>
+          <h1 class="image-cards__content__title">Fall Limited Edition Sneakers</h1>
+          <p class="image-cards__content__description">These low-profile sneakers are your perfect casual wear
+            companion. Featuring a
+            durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+         <div class="price-container">
+           <div class="price-discount">
+            <h2 class="price">$125.00</h2>
+            <p class="discount">50%</p>
+          </div>
+          <p class="previous-price"><s>$250.00</s></p>
+         </div>
+          <div class="add-to-cart">
+            <div class="amount-picker">
+              <img class="icon-minus" src="images/icon-minus.svg" alt="icon-minus">
+              <span class="amount">1</span>
+              <img class="icon-plus" src="images/icon-plus.svg" alt="icon-plus">
+            </div>
+            <button class="add-to-cart__button"> <img src="images/icon-cart-black.svg" alt="icon-cart">Add to
+              cart</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div class="image-cards-overlay hidden">
+    <div class="image-cards-overlay-container">
+      <img class="icon-close" src="images/icon-close.svg" alt="icon-close">
+    <div class="image-preview-big-container">
+      <div class="icon-previous arrow">
+        <img src="images/icon-previous.svg" alt="icon-previous">
+      </div>
+      <img class="image-preview-big" src="images/image-product-1.jpg" alt="image-product-1">
+      <div class="icon-next arrow">
+        <img src="images/icon-next.svg" alt="icon-next">
+      </div>
+    </div>
+    <div class="image-carousel">
+      <div class="image-preview image-preview-active">
+        <img src="images/image-product-1.jpg" alt="image-preview1">
+      </div>
+      <div class="image-preview">
+        <img src="images/image-product-2.jpg" alt="image-preview2">
+      </div>
+      <div class="image-preview">
+        <img src="images/image-product-3.jpg" alt="image-preview3">
+      </div>
+      <div class="image-preview">
+        <img src="images/image-product-4.jpg" alt="image-preview4">
+      </div>
+    </div>
+    </div>
+  </div>
+   <div class="menu-overlay hidden">
+      <div class="navigation-menu">
+        <img class="icon-close-mobile" src="images/icon-close-grey.svg" alt="icon-close">
+         <nav>
+          <ul>
+            <li>Collections</li>
+            <li>Men</li>
+            <li>Women</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  <script src="main.js"></script>
+</body>
+
+</html>
+
+
+<!-- Collections
+  Men
+  Women
+  About
+  Contact
+
+  Sneaker Company
+
+  Fall Limited Edition Sneakers
+
+  These low-profile sneakers are your perfect casual wear companion. Featuring a 
+  durable rubber outer sole, they’ll withstand everything the weather can offer.
+
+  $125.00
+  50%
+  $250.00
+
+  0
+  Add to cart -->
