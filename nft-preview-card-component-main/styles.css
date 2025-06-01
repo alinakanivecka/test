@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: 18px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: hsl(217, 54%, 11%);
+  font-family: "Outfit";
+}
+
+.nft-card {
+  display: flex;
+  flex-direction: column;
+  width: 290px;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: hsl(216, 50%, 16%);
+  position: relative;
+  display: inline-block;
+}
+.nft-card .image-container {
+  background-color: hsl(178, 100%, 50%);
+  margin-bottom: 12px;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 250px;
+  height: 250px;
+  position: relative;
+}
+.nft-card .image-container:hover .image-equilibrium {
+  opacity: 0.5;
+}
+.nft-card .image-container:hover .icon-view {
+  display: block;
+}
+.nft-card .image-container .icon-view {
+  display: none;
+  width: 40px;
+  z-index: 99;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.nft-card .image-container .image-equilibrium {
+  width: 100%;
+  cursor: pointer;
+}
+.nft-card h1 {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 12px 0;
+  cursor: pointer;
+}
+.nft-card h1:hover {
+  color: hsl(178, 100%, 50%);
+}
+.nft-card__description {
+  color: hsl(217, 20%, 59%);
+  font-size: 0.8rem;
+  line-height: 20px;
+}
+.nft-card__price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 19px 0;
+  border-bottom: solid 1px hsl(215, 32%, 27%);
+}
+.nft-card__price {
+  display: flex;
+  gap: 5px;
+}
+.nft-card__price span {
+  color: hsl(178, 100%, 50%);
+  font-size: 0.8rem;
+}
+.nft-card__amount {
+  display: flex;
+  gap: 5px;
+}
+.nft-card__amount span {
+  color: hsl(217, 20%, 59%);
+  font-size: 0.8rem;
+}
+.nft-card .author-creation {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 0;
+}
+.nft-card .author-creation img {
+  width: 30px;
+  border: solid 1px white;
+  border-radius: 50%;
+}
+.nft-card .author-creation p {
+  color: hsl(217, 20%, 59%);
+  font-size: 0.8rem;
+}
+.nft-card .author-creation span {
+  color: white;
+  cursor: pointer;
+}
+.nft-card .author-creation span:hover {
+  color: hsl(178, 100%, 50%);
+}
+
+/*# sourceMappingURL=styles.css.map */

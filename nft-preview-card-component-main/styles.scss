@@ -1,0 +1,140 @@
+$primary-text-color: hsl(217, 20%, 59%);
+$cyan-color: hsl(178, 100%, 50%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: 18px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: hsl(217, 54%, 11%);
+  font-family: "Outfit";
+}
+
+.nft-card {
+  display: flex;
+  flex-direction: column;
+  width: 290px;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: hsl(216, 50%, 16%);
+  position: relative;
+  display: inline-block;
+
+  .image-container {
+    background-color: $cyan-color;
+    margin-bottom: 12px;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 250px;
+    height: 250px;
+    position: relative;
+
+    &:hover {
+      .image-equilibrium {
+        opacity: 0.5;
+      }
+      
+      .icon-view {
+        display: block;
+      }
+    }
+
+    .icon-view {
+      display: none;
+      width: 40px;
+      z-index: 99;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .image-equilibrium {
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+
+  h1 {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 12px 0;
+    cursor: pointer;
+
+    &:hover {
+      color: $cyan-color;
+    }
+  }
+
+  &__description {
+    color: $primary-text-color;
+    font-size: 0.8rem;
+    line-height: 20px;
+  }
+
+  &__price-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 19px 0;
+    border-bottom: solid 1px hsl(215, 32%, 27%);
+  }
+
+  &__price {
+    display: flex;
+    gap: 5px;
+
+    span {
+      color: $cyan-color;
+      font-size: 0.8rem;
+    }
+  }
+
+  &__amount {
+    display: flex;
+    gap: 5px;
+
+    span {
+      color: $primary-text-color;
+      font-size: 0.8rem;
+    }
+  }
+
+  .author-creation {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 0;
+
+    img {
+      width: 30px;
+      border: solid 1px white;
+      border-radius: 50%;
+    }
+
+    p {
+      color: $primary-text-color;
+      font-size: 0.8rem;
+    }
+
+    span {
+      color: white;
+      cursor: pointer;
+
+      &:hover {
+        color: $cyan-color;
+      }
+    }
+  }
+}
