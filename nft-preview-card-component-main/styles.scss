@@ -44,7 +44,7 @@ body {
       .image-equilibrium {
         opacity: 0.5;
       }
-      
+
       .icon-view {
         display: block;
       }
@@ -108,6 +108,7 @@ body {
     span {
       color: $primary-text-color;
       font-size: 0.8rem;
+      white-space: nowrap;
     }
   }
 
