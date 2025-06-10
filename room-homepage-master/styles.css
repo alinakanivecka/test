@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "League Spartan";
+}
+body .room-page-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+body .room-page-grid .header-section {
+  grid-column: 1/5;
+  grid-row: 1/3;
+  position: relative;
+}
+body .room-page-grid .header-section .desktop-image-hero-1 {
+  height: 100%;
+  width: 100%;
+}
+body .room-page-grid .header-section .header {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  padding: 50px;
+  gap: 50px;
+}
+body .room-page-grid .header-section .header__navigation-list {
+  display: flex;
+  list-style: none;
+  color: white;
+  gap: 22px;
+}
+body .room-page-grid .header-section .header__navigation-list .navigation-link {
+  position: relative;
+  cursor: pointer;
+}
+body .room-page-grid .header-section .header__navigation-list .navigation-link:hover::after {
+  content: "";
+  width: 18px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translate(-50%);
+}
+body .room-page-grid .section__text-content {
+  grid-column: 5/8;
+  grid-row: 1/3;
+  width: 100%;
+  height: 100%;
+}
+body .room-page-grid .section__text-content .text-content__discover {
+  padding: 90px 75px;
+}
+body .room-page-grid .section__text-content h1 {
+  font-size: 3.4rem;
+  font-weight: 600;
+  letter-spacing: -3px;
+}
+body .room-page-grid .section__text-content p {
+  font-size: 1.2rem;
+  color: hsl(0, 0%, 63%);
+  padding: 28px 0 25px;
+  line-height: 25px;
+}
+body .room-page-grid .section__text-content .shop-now-button {
+  display: flex;
+  gap: 18px;
+  cursor: pointer;
+}
+body .room-page-grid .section__text-content .shop-now-button:hover {
+  filter: brightness(0) saturate(100%) invert(69%) sepia(4%) saturate(7%) hue-rotate(127deg) brightness(97%) contrast(101%);
+}
+body .room-page-grid .section__text-content .shop-now-button h2 {
+  font-weight: 600;
+  letter-spacing: 15px;
+  font-size: 1.2rem;
+}
+body .room-page-grid .section__text-content .shop-now-button img {
+  width: 53px;
+}
+body .room-page-grid .section__text-content .slide-buttons-desktop {
+  display: flex;
+  background-color: black;
+  width: 33.3333333333%;
+}
+body .room-page-grid .section__text-content .slide-buttons-desktop button {
+  background-color: black;
+  border: none;
+  width: 80px;
+  height: 112px;
+  flex: 1;
+  cursor: pointer;
+}
+body .room-page-grid .section__text-content .slide-buttons-desktop button:hover {
+  background-color: hsl(0, 0%, 27%);
+}
+body .room-page-grid .section-dark {
+  grid-column: 1/3;
+  grid-row: 3/4;
+}
+body .room-page-grid .section-dark img {
+  width: 100%;
+  height: 100%;
+}
+body .room-page-grid .section-furniture {
+  grid-column: 3/6;
+  grid-row: 3/4;
+  padding: 0 30px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body .room-page-grid .section-furniture h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 6px;
+}
+body .room-page-grid .section-furniture p {
+  font-size: 1.2rem;
+  color: hsl(0, 0%, 63%);
+  padding: 25px 0;
+  line-height: 25px;
+}
+body .room-page-grid .section-light {
+  grid-column: 6/8;
+  grid-row: 3/4;
+}
+body .room-page-grid .section-light img {
+  width: 100%;
+  height: 100%;
+}
+body .mobile-image-hero-1,
+body .icon-menu,
+body .slide-buttons-mobile {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 13px;
+  }
+  body:has(.overlay-navigation:not(.hidden)) {
+    overflow: hidden;
+  }
+  body .room-page-grid {
+    display: block;
+  }
+  body .room-page-grid .header-section {
+    position: relative;
+  }
+  body .room-page-grid .header-section .header {
+    width: 100%;
+    justify-content: space-around;
+    padding: 50px 0;
+  }
+  body .room-page-grid .header-section .header .icon-menu {
+    display: block;
+  }
+  body .room-page-grid .header-section .header__navigation-list {
+    display: none;
+  }
+  body .room-page-grid .header-section .slide-buttons-mobile {
+    position: absolute;
+    display: flex;
+    background-color: black;
+    right: 0;
+    bottom: 0;
+  }
+  body .room-page-grid .header-section .slide-buttons-mobile button {
+    background-color: black;
+    border: none;
+    width: 60px;
+    height: 60px;
+    flex: 1;
+  }
+  body .room-page-grid .desktop-image-hero-1 {
+    display: none;
+  }
+  body .room-page-grid .mobile-image-hero-1 {
+    display: block;
+    width: 100%;
+  }
+  body .room-page-grid .text-content__discover {
+    padding: 70px 30px !important;
+  }
+  body .room-page-grid .slide-buttons-desktop {
+    display: none !important;
+  }
+  body .room-page-grid .section-furniture {
+    padding: 50px 30px 25px;
+  }
+  body .overlay-navigation {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+  }
+  body .overlay-navigation .menu-navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 45px 30px;
+    background-color: white;
+  }
+  body .overlay-navigation .menu-navigation .menu__navigation-list {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: black;
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
