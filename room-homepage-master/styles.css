@@ -59,6 +59,9 @@ body .room-page-grid .section__text-content {
   grid-row: 1/3;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 body .room-page-grid .section__text-content .text-content__discover {
   padding: 90px 75px;
