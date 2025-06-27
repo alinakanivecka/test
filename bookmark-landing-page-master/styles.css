@@ -1,0 +1,683 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: 18px;
+  font-family: "Rubik";
+}
+
+body {
+  height: 100%;
+}
+body .header {
+  padding: 50px 150px;
+}
+body .header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .header__content .logo-bookmark {
+  width: 140px;
+  height: 25px;
+}
+body .header__content .icon-hamburger {
+  display: none;
+}
+body .header__content .nav {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+body .header__content .nav__list {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+  color: hsl(229, 31%, 21%);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+body .header__content .nav__list li:hover {
+  color: hsl(0, 94%, 66%);
+}
+body .header__content .nav button {
+  background-color: hsl(0, 94%, 66%);
+  width: 93px;
+  height: 35px;
+  border-radius: 4px;
+  color: hsl(0, 0%, 97%);
+  border: none;
+  font-size: 0.7rem;
+  font-weight: 500;
+  font-family: "Rubik";
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+body .header__content .nav button:hover {
+  color: hsl(0, 94%, 66%);
+  background-color: white;
+  border: 2px solid hsl(0, 94%, 66%);
+}
+body .bookmark-manager {
+  padding: 30px 0 30px 120px;
+  display: flex;
+}
+body .bookmark-manager__content {
+  padding: 100px 80px 0 30px;
+}
+body .bookmark-manager__content h1 {
+  font-size: 2.7rem;
+  color: hsl(229, 31%, 21%);
+  font-weight: 500;
+  line-height: 50px;
+}
+body .bookmark-manager__content p {
+  font-size: 1rem;
+  color: #9b9a9f;
+  padding: 30px 0;
+  line-height: 25px;
+}
+body .bookmark-manager__btns {
+  display: flex;
+  gap: 20px;
+}
+body .bookmark-manager__btns button {
+  border-radius: 4px;
+  width: 153px;
+  height: 43px;
+  border: none;
+  font-size: 0.8rem;
+  font-family: "Rubik";
+  cursor: pointer;
+}
+body .bookmark-manager__btns .chrome-btn {
+  background-color: hsl(231, 69%, 60%);
+  color: hsl(0, 0%, 97%);
+}
+body .bookmark-manager__btns .chrome-btn:hover {
+  background-color: white;
+  color: hsl(231, 69%, 60%);
+  border: 2px solid hsl(231, 69%, 60%);
+  font-weight: 500;
+}
+body .bookmark-manager__btns .firefox-btn {
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+}
+body .bookmark-manager__btns .firefox-btn:hover {
+  background-color: white;
+  color: #616063;
+  border: 2px solid #616063;
+  font-weight: 500;
+}
+body .bookmark-manager .illustration-block {
+  position: relative;
+}
+body .bookmark-manager .illustration-block img {
+  padding-right: 50px;
+  z-index: 99;
+  position: relative;
+}
+body .bookmark-manager .illustration-block div {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-bottom-left-radius: 90px;
+  width: 500px;
+  height: 325px;
+  background-color: hsl(231, 69%, 60%);
+}
+body .features {
+  padding-top: 40px;
+}
+body .features__tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .features__tabs {
+  font-size: 1rem;
+  color: #848387;
+  display: flex;
+  gap: 100px;
+  border-bottom: 1px solid #ececed;
+  cursor: pointer;
+}
+body .features__tabs span:hover {
+  color: hsl(0, 94%, 66%);
+}
+body .features__tabs .feature__tab {
+  position: relative;
+  padding: 25px 30px;
+}
+body .features__tabs .feature__tab.active-tab {
+  color: hsl(229, 31%, 21%);
+}
+body .features__tabs .feature__tab.active-tab::after {
+  position: absolute;
+  content: "";
+  height: 4px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: hsl(0, 94%, 66%);
+}
+body .features .feature {
+  display: flex;
+  padding: 80px 0;
+}
+body .features .feature .illustration-block {
+  position: relative;
+  padding-bottom: 65px;
+}
+body .features .feature .illustration-block img {
+  padding-left: 150px;
+  z-index: 99;
+  position: relative;
+}
+body .features .feature .illustration-block div {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-bottom-right-radius: 90px;
+  width: 590px;
+  height: 330px;
+  background-color: hsl(231, 69%, 60%);
+}
+body .features .feature .simple-bookmarking {
+  padding: 80px 240px 0 150px;
+}
+body .features .feature .simple-bookmarking h2 {
+  font-size: 2rem;
+  color: hsl(229, 31%, 21%);
+  font-weight: 500;
+  line-height: 50px;
+}
+body .features .feature .simple-bookmarking p {
+  font-size: 1rem;
+  color: #9b9a9f;
+  padding: 30px 0;
+  line-height: 27px;
+}
+body .features .feature .simple-bookmarking button {
+  background-color: hsl(231, 69%, 60%);
+  color: hsl(0, 0%, 97%);
+  border-radius: 3px;
+  padding: 13px 20px;
+  border: none;
+  font-size: 0.8rem;
+  font-family: "Rubik";
+  cursor: pointer;
+}
+body .extensions-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 30px 150px;
+}
+body .extensions-cards .card {
+  height: 325px;
+  padding: 25px 25px 20px;
+  border-radius: 8px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(images/bg-dots.svg);
+  background-repeat: no-repeat;
+  background-position: 0 225px;
+  box-shadow: 1px 6px 3px rgba(0, 0, 0, 0.05), 6px 0 0px rgba(0, 0, 0, 0.01), -8px 0 6px rgba(0, 0, 0, 0.03);
+}
+body .extensions-cards .card img {
+  width: 100px;
+  padding-bottom: 25px;
+}
+body .extensions-cards .card h2 {
+  color: hsl(229, 31%, 21%);
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding-bottom: 7px;
+}
+body .extensions-cards .card p {
+  font-size: 0.8rem;
+  color: #9b9a9f;
+  padding-bottom: 60px;
+}
+body .extensions-cards .card button {
+  background-color: hsl(231, 69%, 60%);
+  color: hsl(0, 0%, 97%);
+  border-radius: 3px;
+  width: 185px;
+  height: 41px;
+  border: none;
+  font-size: 0.7rem;
+  font-family: "Rubik";
+  cursor: pointer;
+}
+body .extensions-cards .card button:hover {
+  background-color: white;
+  color: hsl(231, 69%, 60%);
+  border: 2px solid hsl(231, 69%, 60%);
+  font-weight: 500;
+}
+body .extensions-cards .chrome-extension {
+  margin: 0;
+}
+body .extensions-cards .firefox-extension {
+  margin: 40px 0 0;
+}
+body .extensions-cards .opera-extension {
+  margin: 80px 0 0;
+}
+body .faq {
+  padding: 100px 0;
+}
+body .faq .questions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+body .faq .questions .question {
+  width: 530px;
+  border-bottom: 2px solid #ececed;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+body .faq .questions .question .question-text__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .faq .questions .question__answer {
+  padding-top: 30px;
+  font-size: 0.9rem;
+  color: #616063;
+  line-height: 35px;
+  display: none;
+}
+body .faq .questions .question:first-child {
+  border-top: 2px solid #ececed;
+  padding-top: 20px;
+}
+body .faq .questions .question img {
+  width: 34px;
+  height: 25px;
+  margin-right: 16px;
+  align-self: center;
+  cursor: pointer;
+}
+body .faq .questions .question span {
+  color: hsl(229, 31%, 21%);
+  font-size: 1rem;
+  cursor: pointer;
+}
+body .faq .questions .question span:hover {
+  color: hsl(0, 94%, 66%);
+}
+body .faq .questions button {
+  background-color: hsl(231, 69%, 60%);
+  color: hsl(0, 0%, 97%);
+  border-radius: 3px;
+  padding: 13px 20px;
+  border: none;
+  font-size: 0.8rem;
+  font-family: "Rubik";
+  margin-top: 40px;
+  cursor: pointer;
+}
+body .faq .questions .question-text-opened img {
+  transform: rotate(180deg);
+  filter: brightness(0) saturate(100%) invert(53%) sepia(22%) saturate(7247%) hue-rotate(327deg) brightness(98%) contrast(109%);
+}
+body .faq .questions .question-text-opened .question__answer {
+  display: block;
+}
+body .contact-form {
+  background-color: hsl(231, 69%, 60%);
+  padding: 70px 0;
+}
+body .contact-form__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: hsl(0, 0%, 97%);
+}
+body .contact-form__content p {
+  font-size: 0.7rem;
+  letter-spacing: 4px;
+}
+body .contact-form__content h1 {
+  font-size: 1.9rem;
+  padding: 35px 0;
+  font-weight: 500;
+  text-align: center;
+}
+body .contact-form__content form {
+  width: 490px;
+  display: flex;
+  justify-content: space-evenly;
+}
+body .contact-form__content form input {
+  padding: 15px 20px;
+  width: 270px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  color: hsl(229, 31%, 21%);
+  font-size: 0.9rem;
+  box-sizing: content-box;
+}
+body .contact-form__content form input::placeholder {
+  color: hsl(0, 1%, 82%);
+}
+body .contact-form__content form button {
+  background-color: hsl(0, 94%, 66%);
+  color: hsl(0, 0%, 97%);
+  border-radius: 4px;
+  width: 113px;
+  height: 48px;
+  border: none;
+  font-size: 0.8rem;
+  font-family: "Rubik";
+  cursor: pointer;
+}
+body .contact-form__content form button:hover {
+  color: hsl(0, 94%, 66%);
+  background-color: white;
+  border: 2px solid hsl(0, 94%, 66%);
+  font-weight: 500;
+}
+body .contact-form__content form .input-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 2px;
+  border-radius: 5px;
+}
+body .contact-form__content form .input-wrapper img {
+  position: absolute;
+  right: 12px;
+  top: 16px;
+  display: none;
+}
+body .contact-form__content form .input-wrapper .error-message {
+  color: white;
+  padding: 6px 15px;
+  font-size: 0.6rem;
+  text-align: left;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  display: none;
+}
+body .contact-form__content form .invalid-input {
+  background-color: hsl(0, 94%, 66%);
+}
+body .contact-form__content form .invalid-input img,
+body .contact-form__content form .invalid-input .error-message {
+  display: block;
+}
+body .footer {
+  background-color: hsl(229, 31%, 21%);
+  padding: 40px 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .footer__navigation {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+body .footer__navigation img {
+  width: 150px;
+  height: 28px;
+}
+body .footer__navigation ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  color: hsl(0, 0%, 97%);
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+body .footer__navigation ul li:hover {
+  color: hsl(0, 94%, 66%);
+  cursor: pointer;
+}
+body .footer .social-media {
+  display: flex;
+  gap: 35px;
+}
+body .footer .social-media img:hover {
+  filter: brightness(0) saturate(100%) invert(53%) sepia(22%) saturate(7247%) hue-rotate(327deg) brightness(98%) contrast(109%);
+}
+body .description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .description h1 {
+  text-align: center;
+  color: hsl(229, 31%, 21%);
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding-bottom: 25px;
+}
+body .description p {
+  font-size: 1rem;
+  color: #9b9a9f;
+  line-height: 25px;
+  width: 540px;
+  text-align: center;
+  padding-bottom: 50px;
+}
+body .hidden {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  body:has(.overlay:not(.hidden)) {
+    overflow: hidden;
+  }
+  body .overlay {
+    height: 100%;
+    background-color: hsl(229, 37.71%, 13.04%);
+    opacity: 0.9;
+    position: absolute;
+    z-index: 99999;
+    width: 100%;
+  }
+  body .overlay .menu-navigation {
+    padding: 25px 25px 35px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  body .overlay .menu-navigation .menu-icons {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgb(98, 98, 100);
+  }
+  body .overlay .menu-navigation .menu-icons .icon-close {
+    width: 20px;
+    height: 20px;
+  }
+  body .overlay .menu-navigation__link nav {
+    display: flex;
+    flex-direction: column;
+  }
+  body .overlay .menu-navigation__link nav button {
+    margin-top: 20px;
+    width: 100%;
+    background-color: hsl(229, 31%, 21%);
+    opacity: 0.9;
+    border: 3px solid white;
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  body .overlay .menu-navigation__link ul {
+    list-style: none;
+    color: hsl(0, 0%, 97%);
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  body .overlay .menu-navigation__link ul li {
+    width: 325px;
+    padding: 20px 0;
+    border-bottom: 1px solid rgb(98, 98, 100);
+  }
+  body .overlay .menu-navigation .social-media {
+    margin-top: auto;
+    align-self: center;
+    display: flex;
+    gap: 35px;
+  }
+  body main {
+    padding: 25px 25px 0;
+  }
+  body .description h1 {
+    font-size: 1.5rem;
+  }
+  body .description p {
+    width: auto;
+  }
+  body .header {
+    padding: 25px 25px 0;
+  }
+  body .header__content .icon-hamburger {
+    display: block;
+  }
+  body .header__content .nav {
+    display: none;
+  }
+  body .bookmark-manager {
+    flex-direction: column-reverse;
+    padding: 0;
+    margin-top: 50px;
+  }
+  body .bookmark-manager__content {
+    padding: 60px 10px;
+  }
+  body .bookmark-manager__content h1 {
+    font-size: 1.7rem;
+    text-align: center;
+    line-height: normal;
+  }
+  body .bookmark-manager__content p {
+    text-align: center;
+  }
+  body .bookmark-manager .illustration-block img {
+    width: 100%;
+    padding-right: 0;
+  }
+  body .bookmark-manager .illustration-block div {
+    width: 300px;
+    height: 185px;
+    right: -25px;
+  }
+  body .features .feature {
+    flex-direction: column;
+    padding: 70px 0;
+  }
+  body .features .feature .illustration-block {
+    padding-bottom: 30px;
+  }
+  body .features .feature .illustration-block img {
+    padding: 0;
+    width: 100%;
+  }
+  body .features .feature .illustration-block div {
+    width: 300px;
+    left: -30px;
+    height: 209px;
+  }
+  body .features .feature .simple-bookmarking {
+    padding: 40px 0 0;
+  }
+  body .features .feature .simple-bookmarking h2 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  body .features .feature .simple-bookmarking p {
+    text-align: center;
+    padding: 15px 0 90px;
+  }
+  body .features .feature .simple-bookmarking button {
+    display: none;
+  }
+  body .features__tabs {
+    flex-direction: column;
+    gap: 0;
+    text-align: center;
+    width: 100%;
+  }
+  body .features__tabs span {
+    border-bottom: 1px solid rgb(198, 198, 199);
+  }
+  body .features__tabs span:first-child {
+    border-top: 1px solid rgb(198, 198, 199);
+  }
+  body .features__tabs .feature__tab.active-tab::after {
+    width: 50%;
+    transform: translateX(50%);
+  }
+  body .extensions-cards {
+    padding: 0;
+    flex-direction: column;
+    margin: 0 20px;
+  }
+  body .faq .questions .question {
+    width: 100%;
+    border-bottom: 1px solid rgb(198, 198, 199);
+  }
+  body .faq .questions .question:first-child {
+    border-top: none;
+  }
+  body .contact-form {
+    margin: 0 -25px;
+  }
+  body .contact-form__content {
+    padding: 0 20px;
+  }
+  body .contact-form__content h1 {
+    font-size: 1.4rem;
+    padding-top: 20px;
+  }
+  body .contact-form__content form {
+    width: auto;
+    flex-direction: column;
+    gap: 15px;
+  }
+  body .contact-form__content form button {
+    width: 100%;
+  }
+  body .footer {
+    flex-direction: column;
+  }
+  body .footer__navigation {
+    flex-direction: column;
+    gap: 35px;
+  }
+  body .footer__navigation ul {
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 35px;
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
