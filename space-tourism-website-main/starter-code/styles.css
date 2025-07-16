@@ -1,0 +1,752 @@
+:root {
+  --desktop-bg-image-url: url(assets/home/background-home-desktop.jpg);
+  --tablet-bg-image-url: url(assets/home/background-home-tablet.jpg);
+  --mobile-bg-image-url: url(assets/home/background-home-mobile.jpg);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: var(--desktop-bg-image-url);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 16px;
+}
+body .page__title {
+  font-family: "Barlow Condensed";
+  font-size: 1.7rem;
+  letter-spacing: 4px;
+  font-weight: 300;
+}
+body .page__title strong {
+  color: #7a7b7f;
+  font-weight: bold;
+}
+body .header {
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 64px;
+}
+body .header img {
+  height: 48px;
+  width: 48px;
+}
+body .header .icon-hamburger {
+  display: none;
+}
+body .header .logo-line {
+  flex-grow: 1;
+  width: 560px;
+  height: 1px;
+  background-color: white;
+  opacity: 0.1;
+  position: relative;
+  z-index: 2;
+  left: 32px;
+  margin-left: calc((100dvw - 1110px) / 2 - 64px - 48px - 32px);
+}
+body .header .nav-tab-list {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  list-style: none;
+  color: white;
+  backdrop-filter: blur(80px);
+  gap: 48px;
+  height: 96px;
+  width: 736px;
+  padding: 0 64px;
+  font-family: "Barlow Condensed";
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+body .header .nav-tab-list li {
+  height: 96px;
+  display: flex;
+  align-items: center;
+}
+body .header .nav-tab-list strong {
+  padding-right: 12px;
+  font-weight: 500;
+}
+body .main {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  padding: 48px 0;
+}
+body .main .main-page {
+  width: 1110px;
+  height: 792px;
+}
+body .main .home-page {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #d0d6f9;
+  height: 632px !important;
+}
+body .main .home-page .main__description {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex: 1;
+}
+body .main .home-page .main__description span {
+  font-family: "Barlow Condensed";
+  font-size: 1.7rem;
+  letter-spacing: 4px;
+}
+body .main .home-page .main__description h1 {
+  font-size: 10rem;
+  font-family: "Bellefair";
+  color: white;
+  font-weight: 100;
+}
+body .main .home-page .main__description p {
+  font-family: "Barlow";
+  font-size: 1.1rem;
+  line-height: 35px;
+}
+body .main .home-page .button-wrapper .explore-btn {
+  width: 540px;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 1;
+}
+body .main .home-page .button-wrapper .explore-btn button {
+  position: relative;
+  background-color: white !important;
+  height: 272px;
+  width: 272px;
+  border-radius: 50%;
+  border: none;
+  font-family: "Bellefair";
+  font-size: 2rem;
+  z-index: 1;
+  cursor: pointer;
+}
+body .main .home-page .button-wrapper .explore-btn button:hover::after {
+  content: "";
+  position: absolute;
+  width: 430px;
+  height: 430px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translate(-50%, calc(-50% - 18.4px));
+  z-index: 0;
+}
+body .main .home-page .button-wrapper .explore-btn button:hover {
+  color: #7a7b7f;
+}
+body .main .home-page .button-wrapper .button-wrapper:hover .hover-circle {
+  opacity: 1;
+}
+body .main .home-page .button-wrapper .button-wrapper:hover .button {
+  transform: scale(1.05);
+}
+body .main .destination-page {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  color: white;
+  gap: 24px;
+}
+body .main .destination-page__content {
+  display: flex;
+  align-items: center;
+  height: 734px;
+  gap: 32px;
+}
+body .main .destination-page__content .destination-image__container {
+  flex: 1 1 50%;
+}
+body .main .destination-page__content .destination-image__container img {
+  width: 480px;
+}
+body .main .destination-page__content .destination-page__content-explanation {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0 48px;
+}
+body .main .destination-page__content .destination-page__content-explanation .destination-page__tabs ul {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  font-family: "Barlow Condensed";
+  font-size: 1rem;
+  letter-spacing: 2px;
+  font-weight: 300;
+  color: #d0d6f9;
+}
+body .main .destination-page__content .destination-page__content-explanation .destination-page__tabs ul li {
+  height: 32px;
+}
+body .main .destination-page__content .destination-page__content-explanation .tab-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+body .main .destination-page__content .destination-page__content-explanation .tab-content h1 {
+  font-size: 6rem;
+  font-family: "Bellefair";
+  font-weight: 300;
+  text-transform: uppercase;
+}
+body .main .destination-page__content .destination-page__content-explanation .tab-content span {
+  font-size: 1.1rem;
+  font-family: "Barlow";
+  font-weight: 300;
+  color: #d0d6f9;
+  line-height: 35px;
+}
+body .main .destination-page__content .destination-page__content-explanation .line-text {
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  opacity: 0.4;
+}
+body .main .destination-page__content .destination-page__content-explanation .destination__statistics {
+  display: flex;
+  gap: 24px;
+}
+body .main .destination-page__content .destination-page__content-explanation .destination__statistics .statistic-item {
+  width: 210px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+body .main .destination-page__content .destination-page__content-explanation .destination__statistics .statistic-item span {
+  font-family: "Barlow Condensed";
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  color: #d0d6f9;
+}
+body .main .destination-page__content .destination-page__content-explanation .destination__statistics .statistic-item p {
+  font-family: "Bellefair";
+  font-size: 1.8rem;
+  color: white;
+  text-transform: uppercase;
+}
+body .main .crew-page {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  color: white;
+  gap: 24px;
+}
+body .main .crew-page__content {
+  display: flex;
+  align-items: center;
+  height: 734px;
+  gap: 32px;
+}
+body .main .crew-page__content .crew-page__content-description {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  height: 100%;
+  width: 539px;
+}
+body .main .crew-page__content .crew-page__content-description .crew-page__text {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body .main .crew-page__content .crew-page__content-description .crew-page__text .crew-page__content-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  font-family: "Bellefair";
+  height: 181px;
+}
+body .main .crew-page__content .crew-page__content-description .crew-page__text .crew-page__content-name span {
+  font-size: 2rem;
+  color: white;
+  opacity: 0.5;
+  text-transform: uppercase;
+}
+body .main .crew-page__content .crew-page__content-description .crew-page__text .crew-page__content-name h1 {
+  font-size: 3.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+body .main .crew-page__content .crew-page__content-description .crew-page__text p {
+  font-family: "Barlow";
+  font-size: 1.1rem;
+  color: #d0d6f9;
+  line-height: 35px;
+}
+body .main .crew-page__content .crew-page__content-description .crew-page__paginations {
+  display: flex;
+  gap: 40px;
+  padding-bottom: 48px;
+}
+body .main .crew-page__content .crew-page__content-description .crew-page__paginations button {
+  color: white;
+  height: 15px;
+  width: 15px;
+  opacity: 0.2;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+body .main .crew-page__content .crew-page__content-description .crew-page__paginations button:hover {
+  opacity: 0.5;
+}
+body .main .crew-page__content .crew-page__content-description .crew-page__paginations button.active {
+  opacity: 1;
+}
+body .main .crew-page__content img {
+  flex: 1;
+  mask-image: linear-gradient(to bottom, black 66%, transparent 100%);
+}
+body .main .technology-page {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 1275px;
+  margin-left: auto;
+}
+body .main .technology-page__content {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  height: 792px;
+}
+body .main .technology-page__content .technology-page__container {
+  flex: 1;
+  display: flex;
+  gap: 64px;
+}
+body .main .technology-page__content .technology-page__container .technology-page__paginations {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
+}
+body .main .technology-page__content .technology-page__container .technology-page__paginations button {
+  background-color: transparent;
+  color: white;
+  border-radius: 50%;
+  border: 1px solid #716d6d;
+  width: 80px;
+  height: 80px;
+  font-family: "Bellefair";
+  font-size: 2rem;
+  font-weight: 300;
+  cursor: pointer;
+}
+body .main .technology-page__content .technology-page__container .technology-page__paginations button:hover {
+  border: 1px solid white;
+}
+body .main .technology-page__content .technology-page__container .technology-page__paginations button.active {
+  background-color: white;
+  color: #0b0d17;
+}
+body .main .technology-page__content .technology-page__content-description {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+body .main .technology-page__content .technology-page__content-description .technology-page__title {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: "Bellefair";
+}
+body .main .technology-page__content .technology-page__content-description .technology-page__title span {
+  font-size: 2rem;
+  color: white;
+  opacity: 0.5;
+}
+body .main .technology-page__content .technology-page__content-description .technology-page__title h1 {
+  font-size: 3.5rem;
+  color: white;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+body .main .technology-page__content .technology-page__content-description p {
+  font-family: "Barlow";
+  font-size: 1.1rem;
+  color: #d0d6f9;
+  line-height: 35px;
+  font-weight: 300;
+}
+body .main .technology-page__content img {
+  flex: 1;
+  width: 608px;
+  height: 600px;
+}
+body .main .technology-page__content .technology-page__image-mobile {
+  display: none;
+}
+body .link {
+  position: relative;
+  cursor: pointer;
+}
+body .link::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  display: none;
+  bottom: 0;
+  left: 0;
+}
+body .link:hover::after {
+  opacity: 0.5;
+  display: block;
+}
+body .link.active::after {
+  display: block;
+  opacity: 1;
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    background-image: var(--tablet-bg-image-url);
+  }
+  body .header {
+    margin-left: 35px;
+    padding: 0;
+  }
+  body .header .logo-line {
+    display: none;
+  }
+  body .header .nav-tab-list {
+    width: 640px;
+    padding: 0 40px;
+    backdrop-filter: blur(0px);
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  body .main .main-page {
+    height: auto;
+  }
+  body .main .home-page {
+    flex-direction: column;
+    gap: 58px;
+    padding: 128px 40px;
+  }
+  body .main .home-page .main__description {
+    align-items: center;
+  }
+  body .main .home-page .main__description h1 {
+    font-size: 9rem;
+  }
+  body .main .home-page .main__description p {
+    font-size: 1rem;
+    text-align: center;
+    width: 512px;
+  }
+  body .main .home-page .explore-btn {
+    width: auto !important;
+  }
+  body .main .destination-page {
+    gap: 70px;
+  }
+  body .main .destination-page__content {
+    flex-direction: column;
+    gap: 70px;
+    height: auto;
+  }
+  body .main .destination-page__content .destination-image__container {
+    padding: 25px 0;
+  }
+  body .main .destination-page__content .destination-image__container img {
+    width: 300px;
+  }
+  body .main .destination-page__content .destination-page__content-explanation {
+    align-items: center;
+  }
+  body .main .destination-page__content .destination-page__content-explanation .tab-content h1 {
+    text-align: center;
+    font-size: 5rem;
+  }
+  body .main .destination-page__content .destination-page__content-explanation span {
+    font-size: 1rem;
+    text-align: center;
+  }
+  body .main .destination-page__content .destination-page__content-explanation .destination__statistics .statistic-item {
+    align-items: center;
+  }
+  body .main .destination-page__content .destination-page__content-explanation .destination__statistics .statistic-item p {
+    font-size: 1.8rem;
+  }
+  body .main .crew-page {
+    align-items: normal;
+  }
+  body .main .crew-page__content {
+    flex-direction: column;
+    height: auto;
+  }
+  body .main .crew-page__content img {
+    width: 446px;
+  }
+  body .main .crew-page__content-description {
+    align-items: center;
+  }
+  body .main .crew-page__content-description .crew-page__paginations {
+    gap: 16px !important;
+    padding: 0 !important;
+  }
+  body .main .crew-page__content-description .crew-page__paginations button {
+    width: 10px !important;
+    height: 10px !important;
+  }
+  body .main .crew-page__text {
+    text-align: center;
+  }
+  body .main .crew-page__text p {
+    font-size: 1rem !important;
+  }
+  body .main .crew-page__content-name {
+    gap: 8px !important;
+  }
+  body .main .crew-page__content-name span {
+    font-size: 1.5rem !important;
+  }
+  body .main .crew-page__content-name h1 {
+    font-size: 2.5rem !important;
+  }
+  body .main .technology-page {
+    margin: 0;
+    gap: 24px;
+  }
+  body .main .technology-page__content {
+    height: auto;
+    flex-direction: column-reverse;
+  }
+  body .main .technology-page__content .technology-page__content-description {
+    text-align: center;
+    gap: 16px;
+    width: 512px;
+  }
+  body .main .technology-page__content .technology-page__content-description .technology-page__title span {
+    font-size: 1.5rem;
+  }
+  body .main .technology-page__content .technology-page__content-description .technology-page__title h1 {
+    font-size: 2.5rem;
+  }
+  body .main .technology-page__content .technology-page__content-description p {
+    font-size: 1rem;
+  }
+  body .main .technology-page__content .technology-page__image-desktop {
+    display: none;
+  }
+  body .main .technology-page__content .technology-page__image-mobile {
+    display: block;
+    width: 100%;
+  }
+  body .main .technology-page__content .technology-page__container {
+    flex-direction: column;
+    gap: 40px;
+  }
+  body .main .technology-page__content .technology-page__container .technology-page__paginations {
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+  }
+  body .main .technology-page__content .technology-page__container .technology-page__paginations button {
+    width: 56px;
+    height: 56px;
+    font-size: 1.5rem;
+  }
+  body .page__title {
+    font-size: 1.3rem;
+    padding: 0 40px;
+  }
+}
+@media screen and (max-width: 1024px) and (max-width: 767px) {
+  body {
+    background-image: var(--mobile-bg-image-url);
+  }
+  body .page__title {
+    font-size: 1rem;
+    text-align: center;
+  }
+  body .menu-overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    padding-left: 32px;
+    background-color: #0b0d17;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+  body .menu-overlay img {
+    padding: 32px 24px 32px 0;
+    margin-left: auto;
+  }
+  body .menu-overlay .menu-navigation {
+    display: flex;
+  }
+  body .menu-overlay .menu-navigation .navigation {
+    width: 100%;
+  }
+  body .menu-overlay .menu-navigation .navigation .nav-tab-list {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+    list-style: none;
+    color: white;
+    letter-spacing: 2.7px;
+    gap: 32px;
+    font-family: "Barlow Condensed";
+    font-weight: 300;
+  }
+  body .menu-overlay .menu-navigation .navigation .nav-tab-list li {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  body .menu-overlay .menu-navigation .navigation .nav-tab-list li::after {
+    width: 3px;
+    height: 19px;
+    right: 0;
+    bottom: auto;
+    left: auto;
+  }
+  body .menu-overlay .menu-navigation .navigation .nav-tab-list strong {
+    padding-right: 12px;
+    font-weight: 500;
+  }
+  body .hidden {
+    display: none;
+  }
+  body .header {
+    padding: 24px;
+    margin: auto;
+  }
+  body .header .logo {
+    width: 40px;
+    height: 40px;
+  }
+  body .header .icon-hamburger {
+    display: block;
+    width: 20px;
+    height: 21px;
+    margin-left: auto;
+  }
+  body .header .nav-tab-list {
+    display: none;
+  }
+  body .main {
+    padding: 0;
+  }
+  body .main .home-page {
+    padding: 24px;
+  }
+  body .main .home-page .main__description span {
+    font-size: 1rem;
+  }
+  body .main .home-page .main__description h1 {
+    font-size: 5rem;
+  }
+  body .main .home-page .main__description p {
+    width: auto;
+  }
+  body .main .home-page .button-wrapper .explore-btn button {
+    height: 144px;
+    width: 144px;
+    font-size: 1.1rem;
+  }
+  body .main .destination-page {
+    gap: 24px;
+    padding: 24px;
+  }
+  body .main .destination-page .destination-page__content {
+    gap: 32px;
+  }
+  body .main .destination-page .destination-page__content .destination-image__container img {
+    width: 150px;
+    height: 150px;
+  }
+  body .main .destination-page .destination-page__content .destination-page__content-explanation {
+    padding: 0 !important;
+    gap: 24px;
+  }
+  body .main .destination-page .destination-page__content .destination-page__content-explanation .destination-page__tabs ul {
+    font-size: 0.9rem;
+  }
+  body .main .destination-page .destination-page__content .destination-page__content-explanation .tab-content span {
+    font-size: 0.9rem;
+  }
+  body .main .destination-page .destination-page__content .destination-page__content-explanation .destination__statistics {
+    flex-direction: column;
+  }
+  body .main .crew-page {
+    padding: 24px;
+  }
+  body .main .crew-page .crew-page__content img {
+    width: 271px;
+  }
+  body .main .crew-page .crew-page__content .crew-page__content-description {
+    width: auto;
+    gap: 24px;
+  }
+  body .main .crew-page .crew-page__content .crew-page__content-description .crew-page__text {
+    padding: 40px 0 20px;
+    gap: 24px;
+  }
+  body .main .crew-page .crew-page__content .crew-page__content-description .crew-page__text p {
+    font-size: 0.9rem !important;
+  }
+  body .main .crew-page .crew-page__content .crew-page__content-description .crew-page__text .crew-page__content-name {
+    height: auto;
+  }
+  body .main .crew-page .crew-page__content .crew-page__content-description .crew-page__text .crew-page__content-name span {
+    font-size: 1.1rem !important;
+  }
+  body .main .crew-page .crew-page__content .crew-page__content-description .crew-page__text .crew-page__content-name h1 {
+    font-size: 1.5rem !important;
+  }
+  body .main .technology-page {
+    padding: 24px 0 48px;
+  }
+  body .main .technology-page .technology-page__content .technology-page__container {
+    padding: 0 24px;
+  }
+  body .main .technology-page .technology-page__content .technology-page__container .technology-page__paginations button {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+  body .main .technology-page .technology-page__content .technology-page__content-description {
+    width: auto;
+  }
+  body .main .technology-page .technology-page__content .technology-page__content-description .technology-page__title span {
+    font-size: 1.1rem;
+  }
+  body .main .technology-page .technology-page__content .technology-page__content-description .technology-page__title h1 {
+    font-size: 1.5rem;
+  }
+  body .main .technology-page .technology-page__content .technology-page__content-description p {
+    font-size: 0.9rem;
+  }
+  body .main .technology-page .technology-page__content .technology-page__image-mobile {
+    padding-top: 64px;
+  }
+}
+.hidden {
+  display: none !important;
+}
+
+/*# sourceMappingURL=styles.css.map */
