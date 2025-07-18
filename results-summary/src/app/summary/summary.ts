@@ -1,6 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { SummaryItem } from './summary-item.model';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, provideHttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-summary',
