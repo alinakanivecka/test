@@ -11,7 +11,7 @@ export class Summary implements OnInit {
   data: SummaryItem[] = [];
 
   async ngOnInit() {
-    this.data = await (await fetch('/data.json')).json();
+    this.data = await (await fetch('data.json')).json();
   }
 
   calcAvgScore() {
