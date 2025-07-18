@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(221, 100%, 96%);
+  font-family: 'Hanken Grotesk';
+}
+
+@media screen and (max-width: 420px) {
+  body {
+    height: auto;
+  }
+}

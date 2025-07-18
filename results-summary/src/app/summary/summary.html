@@ -1,0 +1,25 @@
+<div class="summary-component">
+  <div class="summary-component__result">
+    <span> Your Result</span>
+    <div class="result-number-circle">
+      <span>{{calcAvgScore()}}</span>
+      <p>of 100</p>
+    </div>
+    <h1>Great</h1>
+    <p> You scored higher than 65% of the people who have taken these tests.</p>
+  </div>
+  <div class="summary-component__results">
+    <span>Summary</span>
+   <div class="summary-items">
+     @for (item of data; track $index) {
+    <div class="summary-item" [style.backgroundColor]="item.backgroundColor">
+      <img [src]="item.icon" alt="icon-reaction">
+      <span [style.color]="item.color">{{item.category}}</span>
+      <p><strong>{{item.score}}</strong> / 100</p>
+    </div>
+    }
+   </div>
+
+    <button type="button">Continue</button>
+  </div>
+</div>
