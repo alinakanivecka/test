@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { SummaryItem } from './summary-item.model';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-summary',
@@ -9,9 +10,10 @@ import { SummaryItem } from './summary-item.model';
 })
 export class Summary implements OnInit {
   data: SummaryItem[] = [];
+  httpClient = inject(HttpClient);
 
   async ngOnInit() {
-    this.data = await (await fetch('data.json')).json();
+    this.httpClient.get<SummaryItem[]>('data.json').subscribe(x => this.data = x);
   }
 
   calcAvgScore() {
